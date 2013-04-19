@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="twig.extension.shortcode" class="MW\Bundle\ShortcodeBundle\Twig\Extension\ShortcodeTwigExtension" public="false">
+            <argument type="service" id="templating.helper.shortcode" />
+            <tag name="twig.extension" />
+        </service>
+
+        <service id="templating.helper.shortcode" class="MW\Bundle\ShortcodeBundle\Helper\ShortcodeHelper" public="false">
+            <tag name="templating.helper" alias="shortcode" />
+        </service>
+    </services>
+</container>
