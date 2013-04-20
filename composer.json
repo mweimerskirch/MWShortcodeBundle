@@ -1,5 +1,5 @@
 {
-    "name": "mw/shortcodes-bundle",
+    "name": "mw/shortcode-bundle",
     "description": "Bundle that provides a Twig filter to support WordPress-like shortcodes.",
     "keywords": ["shortcode"],
     "type": "symfony-bundle",
@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "symfony/framework-bundle": ">=2.2",
+        "symfony/framework-bundle": ">=2.2"
     },
     "autoload": {
         "psr-0": {
