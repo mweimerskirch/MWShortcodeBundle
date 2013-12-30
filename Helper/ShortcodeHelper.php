@@ -12,7 +12,7 @@ use Symfony\Component\Templating\Helper\HelperInterface;
 class ShortcodeHelper implements HelperInterface
 {
 
-    private static $shortcodes = [];
+    private static $shortcodes = array();
 
     public static function addShortcodeType($alias, $shortcode)
     {
@@ -40,7 +40,7 @@ class ShortcodeHelper implements HelperInterface
         $alias = $code[1];
         $atts = $code[2];
 
-        $options = [];
+        $options = array();
         foreach (explode(" ", $atts) as $att) {
             $att = trim($att);
             if (!$att) {
