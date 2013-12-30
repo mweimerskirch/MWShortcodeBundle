@@ -10,6 +10,34 @@ Not yet supported are:
 * <code>[demo]...[/demo]</code> (tags with embedded content)
 * <code>[demo var="xxx"]</code> (tags with quoted attributes)
 
+###Installation
+
+
+Add MWShortcodeBundle in your composer.json:
+
+```
+{
+    "require": {
+        "mw/shortcode-bundle": "dev-master"
+    }
+}
+```
+
+Register the bundle in AppKernel
+
+```
+<?php
+// app/AppKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new MW\Bundle\ShortcodeBundle\MWShortcodeBundle(),
+    );
+}
+```
+
 ##How to use:
 
 ###1. Create a new shortcode handler
