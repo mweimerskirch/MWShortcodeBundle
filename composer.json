@@ -19,5 +19,5 @@
             "MW\\Bundle\\ShortcodeBundle": ""
         }
     },
-    "target-dir": "MW/Bundle/MWShortcodeBundle"
+    "target-dir": "MW/Bundle/ShortcodeBundle"
 }
