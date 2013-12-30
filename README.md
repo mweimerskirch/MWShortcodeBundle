@@ -45,6 +45,8 @@ public function registerBundles()
 ``` php
 <?php
 
+#MyProject\Bundle\TestBundle\Shortcode\DemoShortcode.php
+
 namespace MyProject\Bundle\TestBundle\Shortcode;
 
 use MW\Bundle\ShortcodeBundle\Shortcode\BaseShortcode;
@@ -68,6 +70,21 @@ class DemoShortcode extends BaseShortcode
     <tag name="mw.shortcode" alias="demo" />
 </service>
 ```
+
+YML example
+
+```
+parameters:
+    myproject.shortcode.demo: MyProject\Bundle\TestBundle\Shortcode\DemoShortcode
+
+services:
+    myproject.shortcode.demo:
+        class: %myproject.shortcode.demo%
+        tags:
+            - { name: mw.shortcode, alias: demo }
+
+```
+
 
 ###3. Use it in your Twig templates
 
