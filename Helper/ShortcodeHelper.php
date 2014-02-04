@@ -5,7 +5,7 @@ namespace MW\Bundle\ShortcodeBundle\Helper;
 use Symfony\Component\Templating\Helper\HelperInterface;
 
 /**
- * 
+ *
  *
  * @author Michel Weimerskirch
  */
@@ -38,7 +38,7 @@ class ShortcodeHelper implements HelperInterface
     public function replaceShortcode($code)
     {
         $alias = $code[1];
-        $atts = $code[2];
+        $atts = (isset($code[2])) ? $code[2] : "";
 
         $options = array();
         foreach (explode(" ", $atts) as $att) {
